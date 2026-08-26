@@ -1,0 +1,239 @@
+:root{
+  --accent:#f59e0b;
+  --accent-dark:#d98200;
+  --dark:#101820;
+  --dark-2:#19232d;
+  --text:#5f6670;
+  --light:#f5f6f7;
+  --white:#ffffff;
+  --border:#e4e7eb;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:var(--dark);
+  background:#fff;
+  line-height:1.75;
+  font-size:15px;
+}
+a{text-decoration:none;transition:.25s ease}
+img{max-width:100%;display:block}
+p{color:var(--text);margin-bottom:1rem}
+
+/* About shared utility classes */
+.about-section-space{padding:100px 0}
+.about-section-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--accent-dark);
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.about-section-kicker::before{content:"";width:28px;height:3px;background:var(--accent);display:inline-block}
+.about-section-title{font-size:clamp(32px,4vw,48px);font-weight:800;line-height:1.16;margin-bottom:20px;letter-spacing:-.03em}
+.btn{border-radius:0;font-weight:700;letter-spacing:.02em;padding:.9rem 1.35rem}
+.about-btn-accent{background:var(--accent);border-color:var(--accent);color:var(--dark)}
+.about-btn-accent:hover,.about-btn-accent:focus{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff}
+
+/* About header */
+.about-site-header{z-index:1040}
+.about-header-info{padding:15px 0;background:#fff;border-bottom:1px solid var(--border)}
+.about-brand{display:inline-flex;align-items:center;gap:10px;color:var(--dark)}
+.about-brand:hover{color:var(--dark)}
+.about-brand-icon{width:52px;height:52px;display:grid;place-items:center;background:var(--accent);color:var(--dark);font-size:24px;transform:skew(-8deg)}
+.about-brand-icon i{transform:skew(8deg)}
+.about-brand-copy{display:flex;flex-direction:column;line-height:.88;letter-spacing:.02em}
+.about-brand-copy strong{font-size:30px;font-weight:800}
+.about-brand-copy small{font-size:12px;letter-spacing:.22em;font-weight:700;margin-top:6px}
+.about-contact-strip{height:100%}
+.about-contact-item{display:flex;align-items:center;gap:11px;padding:0 15px;border-left:1px solid var(--border)}
+.about-contact-item:first-child{border-left:0}
+.about-contact-item>i{color:var(--accent);font-size:24px;min-width:28px;text-align:center}
+.about-contact-item span{display:block;font-size:10px;font-weight:800;letter-spacing:.1em;color:#7a8087;margin-bottom:2px}
+.about-contact-item a,.about-contact-item p{margin:0;color:var(--dark);font-size:12px;font-weight:600;line-height:1.35}
+.about-contact-item a:hover{color:var(--accent-dark)}
+.about-btn-quote{font-size:12px;white-space:nowrap}
+
+.about-main-nav{background:var(--dark)}
+.about-main-nav .nav-link{color:#fff!important;font-size:14px;font-weight:600;padding:20px 17px!important}
+.about-main-nav .nav-link:hover,.about-main-nav .nav-link.active{color:var(--accent)!important}
+.about-main-nav .dropdown-menu{border:0;border-radius:0;box-shadow:0 15px 40px rgba(0,0,0,.16);padding:8px 0;min-width:260px}
+.about-main-nav .dropdown-item{padding:10px 18px;font-size:13px;font-weight:600;white-space:normal}
+.about-main-nav .dropdown-item:hover{background:#fff5df;color:var(--accent-dark)}
+.about-dropdown-submenu{position:relative}
+.about-dropdown-submenu>.about-submenu{top:-8px;left:100%;margin-left:0;display:none}
+.about-dropdown-submenu:hover>.about-submenu{display:block}
+.about-nav-social a,.about-search-toggle{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:#fff;border:0;font-size:13px}
+.about-nav-social a:hover,.about-search-toggle:hover{background:var(--accent);color:var(--dark)}
+.about-mobile-contact{display:flex;flex-direction:column;gap:10px;color:#fff}
+.about-mobile-contact a,.about-mobile-contact span{color:#fff;font-size:13px}
+.about-search-canvas{height:auto!important}
+
+/* About page hero */
+.about-inner-hero-base{min-height:430px;background:linear-gradient(120deg,#0d141b 0%,#18232d 100%);display:flex;align-items:center;color:#fff;isolation:isolate}
+.about-inner-hero-base::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,16,22,.94),rgba(10,16,22,.62));z-index:-1}
+.about-inner-hero-content{z-index:2;padding-top:80px;padding-bottom:80px}
+.about-inner-hero-base h1{font-size:clamp(48px,6vw,74px);font-weight:800;letter-spacing:-.045em;margin:0 0 18px}
+.about-breadcrumb-line{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.05em}
+.about-breadcrumb-line a{width:38px;height:38px;display:grid;place-items:center;background:var(--accent);color:var(--dark)}
+.about-breadcrumb-line strong{color:var(--accent)}
+.about-inner-hero-shape{position:absolute;width:360px;height:360px;object-fit:contain;opacity:.10;z-index:-1;pointer-events:none}
+.about-inner-hero-base .about-shape-one{right:-80px;top:-95px}
+.about-inner-hero-base .about-shape-two{left:-120px;bottom:-180px;transform:rotate(180deg)}
+
+/* About intro */
+.about-page-images{min-height:590px;padding:0 72px 55px 0}
+.about-page-main{width:91%;height:525px;object-fit:cover}
+.about-page-side{position:absolute;right:0;bottom:0;width:48%;height:280px;object-fit:cover;border:10px solid #fff;box-shadow:0 18px 45px rgba(16,24,32,.13)}
+.about-play{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--dark);font-size:20px;box-shadow:0 0 0 12px rgba(245,158,11,.22)}
+.about-play:hover{background:#fff;color:var(--dark)}
+.about-feature-list{display:grid;gap:10px}
+.about-feature-list li{padding:8px 0;font-size:14px;font-weight:600;color:#343b43}
+.about-feature-list i{color:var(--accent);margin-right:9px}
+.about-years-card{background:var(--dark);color:#fff;padding:27px 23px;display:flex;flex-direction:column;justify-content:center;min-height:210px;border-bottom:6px solid var(--accent);position:relative;overflow:hidden}
+.about-years-card::before{content:"";position:absolute;width:100px;height:100px;border:18px solid rgba(255,255,255,.05);right:-35px;top:-28px;border-radius:50%}
+.about-years-card strong{font-size:54px;line-height:1;color:var(--accent);font-weight:800}
+.about-years-card span{font-size:11px;letter-spacing:.08em;font-weight:800;margin-top:10px;max-width:120px}
+.about-years-card>i{position:absolute;right:20px;bottom:20px;color:var(--accent)}
+
+/* About counters */
+.about-counters{background:var(--dark)}
+.about-counter-card{min-height:205px;color:#fff;padding:34px 25px;text-align:center;border-right:1px solid rgba(255,255,255,.10);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.about-counters [class*="col-"]:last-child .about-counter-card{border-right:0}
+.about-counter-card>i{font-size:28px;color:var(--accent);margin-bottom:14px}
+.about-counter-card strong{font-size:40px;line-height:1;font-weight:800}
+.about-counter-card strong span{color:var(--accent)}
+.about-counter-card p{margin:9px 0 0;color:rgba(255,255,255,.72);font-size:12px;font-weight:600}
+
+/* Who we are */
+.about-who-section{background:#fff}
+.about-skill-block{margin-bottom:33px}
+.about-skill-head{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:9px;font-size:14px;font-weight:800}
+.about-skill-head strong{color:var(--accent-dark)}
+.about-skill-block .progress{height:8px;border-radius:0;background:#e8ebee;margin-bottom:15px}
+.about-skill-block .progress-bar{background:var(--accent)}
+.about-skill-block p{font-size:13px;margin:0}
+.about-who-copy{background:var(--light);padding:45px;border-left:6px solid var(--accent)}
+.about-who-image-wrap{height:230px;overflow:hidden}
+.about-who-image-wrap img{width:100%;height:100%;object-fit:cover}
+
+/* About partners */
+.about-partners{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#fafafa}
+.about-partner-grid img{height:54px;width:100%;object-fit:contain;filter:grayscale(1);opacity:.65;transition:.25s}
+.about-partner-grid img:hover{filter:none;opacity:1}
+
+/* About core values */
+.about-core-values-section{background:#111a22;color:#fff}
+.about-core-values-section::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 95% 10%,rgba(245,158,11,.14),transparent 32%);pointer-events:none}
+.about-core-values-section .about-section-title{color:#fff}
+.about-value-card{background:#17232d;padding:32px;border:1px solid rgba(255,255,255,.09);transition:.3s ease}
+.about-value-card:hover{transform:translateY(-7px);border-color:var(--accent)}
+.about-value-icon{width:52px;height:52px;background:var(--accent);display:grid;place-items:center;color:var(--dark);font-size:20px;margin-bottom:22px}
+.about-value-card h5{font-size:20px;font-weight:800;color:#fff}
+.about-value-line{width:42px;height:3px;background:var(--accent);margin:14px 0 18px}
+.about-value-card p{color:rgba(255,255,255,.67);font-size:13px;margin-bottom:0}
+
+/* About team */
+.about-team-section{background:#f5f6f7}
+.about-team-pattern{position:absolute;width:350px;opacity:.07;pointer-events:none}
+.about-team-pattern-one{right:-95px;top:-100px}
+.about-team-pattern-two{left:-120px;bottom:-150px;transform:rotate(180deg)}
+.about-team-card{background:#fff;box-shadow:0 14px 35px rgba(16,24,32,.08);height:100%;overflow:hidden;transition:.3s}
+.about-team-card:hover{transform:translateY(-7px)}
+.about-team-photo{height:310px;display:grid;place-items:center;font-size:80px;color:rgba(255,255,255,.82);position:relative;background-size:cover;background-position:center}
+.about-team-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(11,17,22,.38))}
+.about-team-photo i{position:relative;z-index:1;text-shadow:0 7px 20px rgba(0,0,0,.2)}
+.about-team-photo-1{background:linear-gradient(135deg,#34424e,#17212a)}
+.about-team-photo-2{background:linear-gradient(135deg,#b87818,#473017)}
+.about-team-photo-3{background:linear-gradient(135deg,#52665c,#1f2b25)}
+.about-team-photo-4{background:linear-gradient(135deg,#56616b,#212b33)}
+.about-team-info{padding:23px;position:relative}
+.about-team-info h3{font-size:18px;font-weight:800;margin:0 0 4px}
+.about-team-info>p{font-size:12px;margin:0;color:var(--text)}
+.about-team-social{display:flex;gap:7px;margin-top:15px}
+.about-team-social a{width:32px;height:32px;display:grid;place-items:center;background:var(--dark);color:#fff;font-size:11px;border-radius:50%}
+.about-team-social a:hover{background:var(--accent);color:var(--dark)}
+
+/* About footer */
+.about-site-footer{background:#0c1218;color:#fff}
+.about-site-footer p{color:rgba(255,255,255,.66)}
+.about-footer-brand{color:#fff}
+.about-footer-brand:hover{color:#fff}
+.about-site-footer h5{font-size:16px;font-weight:800;margin-bottom:20px;position:relative;padding-bottom:10px}
+.about-site-footer h5::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:3px;background:var(--accent)}
+.about-footer-links li{margin-bottom:9px}
+.about-footer-links a,.about-footer-contact a{color:rgba(255,255,255,.7)}
+.about-footer-links a:hover,.about-footer-contact a:hover{color:var(--accent)}
+.about-footer-contact{display:grid;gap:14px}
+.about-footer-contact li{display:flex;gap:12px;color:rgba(255,255,255,.7);align-items:flex-start}
+.about-footer-contact i{color:var(--accent);margin-top:5px}
+.about-footer-social a{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;color:#fff}
+.about-footer-social a:hover{background:var(--accent);border-color:var(--accent);color:var(--dark)}
+.about-footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:18px 0;font-size:12px}
+.about-footer-bottom p{color:rgba(255,255,255,.6)}
+.about-footer-bottom a{color:rgba(255,255,255,.7)}
+.about-footer-bottom a:hover{color:var(--accent)}
+
+/* About responsive */
+@media (max-width:1199.98px){
+  .about-contact-item{padding:0 8px}
+  .about-contact-item a,.about-contact-item p{font-size:11px}
+  .about-main-nav .nav-link{padding:19px 11px!important}
+}
+
+@media (max-width:991.98px){
+  .about-section-space{padding:75px 0}
+  .about-site-header{position:sticky;top:0}
+  .about-main-nav{padding:10px 0!important}
+  .about-main-nav .navbar-brand{padding:0;color:#fff}
+  .about-main-nav .about-brand-icon{width:43px;height:43px;font-size:19px}
+  .about-main-nav .about-brand-copy strong{font-size:25px}
+  .about-main-nav .about-brand-copy small{font-size:9px}
+  .navbar-toggler{background:#fff;padding:8px 10px}
+  .about-main-nav .nav-link{padding:12px 0!important;border-bottom:1px solid rgba(255,255,255,.08)}
+  .about-main-nav .dropdown-menu{position:static!important;transform:none!important;box-shadow:none;background:#141f28;padding-left:14px;margin:0;border:0}
+  .about-main-nav .dropdown-item{color:#fff;padding:10px 0}
+  .about-main-nav .dropdown-item:hover{background:transparent;color:var(--accent)}
+  .about-dropdown-submenu>.about-submenu{position:static!important;display:none!important;background:#1c2832;padding-left:15px}
+  .about-dropdown-submenu>.about-submenu.show{display:block!important}
+  .about-inner-hero-base{min-height:340px}
+  .about-inner-hero-content{padding-top:65px;padding-bottom:65px}
+  .about-page-images{max-width:720px;margin:auto}
+  .about-who-copy{padding:35px}
+  .about-counter-card{border-bottom:1px solid rgba(255,255,255,.10)}
+  .about-counters .row>div:nth-child(2) .about-counter-card{border-right:0}
+}
+
+@media (max-width:767.98px){
+  body{font-size:14px}
+  .about-section-space{padding:62px 0}
+  .about-section-title{font-size:34px}
+  .about-inner-hero-base{min-height:290px}
+  .about-inner-hero-base h1{font-size:46px}
+  .about-page-images{min-height:500px;padding:0 40px 60px 0}
+  .about-page-main{height:440px}
+  .about-page-side{height:220px;width:54%}
+  .about-play{width:60px;height:60px}
+  .about-years-card{min-height:170px}
+  .about-team-photo{height:275px}
+}
+
+@media (max-width:575.98px){
+  .about-page-images{min-height:430px;padding:0 25px 58px 0}
+  .about-page-main{height:365px;width:96%}
+  .about-page-side{height:170px;width:58%;border-width:7px}
+  .about-counter-card{min-height:170px;padding:24px 12px}
+  .about-counter-card strong{font-size:34px}
+  .about-counter-card p{font-size:10px}
+  .about-who-copy{padding:28px 22px}
+  .about-value-card{padding:26px}
+  .about-team-photo{height:260px}
+  .about-footer-bottom{text-align:center}
+}
